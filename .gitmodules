@@ -1,0 +1,3 @@
+[submodule "Xiaomi_Kernel_OpenSource"]
+	path = Xiaomi_Kernel_OpenSource
+	url = https://github.com/LrkSeraph/xiaomi_pipa_sm8250_kernel.git
