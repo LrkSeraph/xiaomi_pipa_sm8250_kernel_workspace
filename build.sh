@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
-TOOLCHAINS=$(dirname $(realpath $0))/toolchain
+TOOLCHAINS=$(realpath $(dirname $0)/../toolchain)
 export PATH="$TOOLCHAINS/Snapdragon-LLVM-ARM-Compiler-10.0.7-for-Android-NDK/bin:$PATH"
 export PATH="$TOOLCHAINS/aarch64-linux-android-4.9/bin:$PATH"
 export LD_LIBRARY_PATH="$TOOLCHAINS/Snapdragon-LLVM-ARM-Compiler-10.0.7-for-Android-NDK/lib64"
 
 OS="13.0.0"
 OS_PATCH_LEVEL="2023-10"
-KDIR=$(readlink -f .)
-RESOURCE=$(readlink -f $(dirname $(realpath $0))/mkbootimg_resource)
+KDIR=$(readlink -f $(dirname $0))
+RESOURCE=$(readlink -f $(realpath $(dirname $0)/../mkbootimg_resource))
 OUT=$(readlink -f $KDIR/out)
 
 FLAGS=$(echo ARCH=arm64 O="$OUT" CC=clang HOSTCC=gcc HOSTCXX=g++ CLANG_TRIPLE=aarch64-linux-gnu- CROSS_COMPILE=aarch64-linux-android-)
