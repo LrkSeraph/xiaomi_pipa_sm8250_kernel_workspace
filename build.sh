@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 TOOLCHAINS=$(realpath $(dirname $0)/../toolchain)
 export PATH="$TOOLCHAINS/Snapdragon-LLVM-ARM-Compiler-10.0.7-for-Android-NDK/bin:$PATH"
-export PATH="$TOOLCHAINS/aarch64-linux-android-4.9/bin:$PATH"
+export PATH="$TOOLCHAINS/binutils-2.28-aarch64-linux-android/bin:$PATH"
 export LD_LIBRARY_PATH="$TOOLCHAINS/Snapdragon-LLVM-ARM-Compiler-10.0.7-for-Android-NDK/lib64"
+export INSTALL_MOD_PATH="$(realpath $(dirname $0)/../sysroot)"
 
 OS="13.0.0"
 OS_PATCH_LEVEL="2023-10"

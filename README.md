@@ -3,7 +3,7 @@ This repository contains all required file to build kernel for Xiaomi Pad 6(pipa
 It also contains build script for wlan driver. <br/>
 
 # How to use
-You need to sync the submodule and enter `Xiaomi_Kernel_OpenSource` directory. <br/>
+You need to sync the submodule using `git submodule init && git submodule update` and enter `Xiaomi_Kernel_OpenSource` directory. <br/>
 Then run
 ```bash
 mkdir out
